@@ -9,12 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <title>Les Petits Plats</title>
-    <link rel="icon" href="logo-small.png">
+    <link rel="icon" href="images/logo-small.png">
 </head>
 <body>
     <header class="header">
         <div class="img">
-            <img src="logo.svg" alt="Logo des petits plats">
+            <img src="images/logo.svg" alt="Logo des petits plats">
         </div>
         <h1>Les petits Plats</h1>
     </header>
@@ -22,35 +22,85 @@
         <section id="searchSection">
             <div class="searchInput">
                 <input type="text" 
-                id="searchInput" placeholder="echerchez un ingrédient, un appareil, ustensiles ou une recette"
+                id="searchInput" placeholder="Recherchez un ingrédient, un appareil, ustensiles ou une recette"
                 class="search">
             </div>
-
-        </section>
-
-
-
-        <aside class="search">
-            <div class="input-group">
-                <input type="text" class="form-control" id="search" placeholder="Rechercher un ingrédiant, appareil, ustensiles ou une recette" data-search="">
-                <label class="form-label" for="search">
-                    
-                </label>
+            <div id="tagSearch" class="tagSaerch">
+                <div class="tagSearch__ingredient"></div>
+                <div class="tagSearch__appareil"></div>
+                <div class="tagSearch__ustensile"></div>
             </div>
-            <div class="search-tags" data-filter-tags></div>
-            <div class="search-filters">
-                <div class="combobox combobox-primary" data-filter="ingredients">
-                    <div class="combobox-wrapper">
-                        <div class="combobox-control">
-                            <label for="ingredients" class="combobox-control-label" data-filter-label>Ingredients</label>
-                            <input type="text" placeholder="Rechercher un ingredient" class="combobox-control-input" id="ingredients" style="display: none;" data-filter-input>
-                            <button class="combobox-control-expand" data-filter-expand><svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.12 0.453369L8 6.56004L1.88 0.453369L0 2.33337L8 10.3334L16 2.33337L14.12 0.453369Z" fill="white"/></svg></button>
-                        </div>
-                        <ul class="combobox-results" data-filter-results style="display: none;"></ul>
-                    </div>
-                </div>
-        </aside>
 
+            <div class="container">
+                <div class="dropdown dropdown__ingredient ingredient">
+                    <div class="dropdown__button ingredient__button"
+                    role="button"
+                    id="dropdownMenuIngredient">
+                    <!-- Voire Image ingredients avec la fleche -->
+                    Ingrédients<img src="images/fleche.svg" alt="" 
+                    class="flecheOpen flecheIngredient"/>
+                </div>
+                <div class="ingredient__search hidde boutons" 
+                aria-labelledby="dropdownMenuIngredient">
+                <input type="text" placeholder="Rechercher un ingrédient"
+                class="ingredient__search__input input">
+                <img src="images/fleche.svg" alt="" class="fleche"/>
+                <ul class="ingrédient__search--menu"></ul>
+              </div>
+            </div>
+
+            <div class="dropdown dropdown__appareil appareil">
+              <div class="dropdown__button appareil__button"
+              role="button"
+              id="dropdownMenuAppareil">
+              Appareil <img src="images/fleche.svg" alt=""
+              class="flecheOpen flecheAppareil"/>
+              </div>
+              <div
+              class="appareil__search hidde boutons"
+              aria-labelledby="dropdownMenuAppareil"
+            >
+              <input
+                type="text"
+                placeholder="Recherche un appareil"
+                class="appareil__search__input input"
+              />
+              <img src="./images/felche.svg" alt="" class="fleche" />
+              <ul class="appareil__search__menu"></ul>
+            </div>
+          </div>
+
+          <div class="dropdown dropdown__ustensile ustensile">
+            <div
+              class="dropdown__button ustensile__button"
+              role="button"
+              id="dropdownMenuUstensile"
+            >
+              Ustensiles<img
+                src="./images/felche.svg"
+                alt=""
+                class="flecheOpen flecheUstensile"
+              />
+            </div>
+            <div
+              class="ustensile__search hidde boutons"
+              aria-labelledby="dropdownMenuUstensile"
+            >
+              <input
+                type="text"
+                placeholder="Recherche un ustensile"
+                class="ustensile__search__input input"
+              />
+              <img src="./images/felche.svg" alt="" class="fleche" />
+              <ul class="ustensile__search__menu"></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="recipesList"></section>
     </main>
-</body>
+
+    <script type="module" src="./js/app.js"></script>
+  </body>
 </html>
