@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"> -->
     <title>Les Petits Plats</title>
     <link rel="icon" href="images/logo-small.png">
     <link rel="stylesheet" href="style.css" />
@@ -26,10 +26,15 @@
                 id="searchInput" placeholder="Recherchez un ingrédient, un appareil, ustensiles ou une recette"
                 class="search">
             </div>
+            /*ajout de INPUT
             <div id="tagSearch" class="tagSaerch">
                 <div class="tagSearch__ingredient"></div>
+                <input type="search">
                 <div class="tagSearch__appareil"></div>
+                <input type="search">
                 <div class="tagSearch__ustensile"></div>
+                <input  class="dropDownSearch" type="search">
+
             </div>
 
             <div class="container">
@@ -37,9 +42,9 @@
                     <div class="dropdown__button ingredient__button"
                     role="button"
                     id="dropdownMenuIngredient">
-                    <!-- Voire Image ingredients avec la fleche -->
                     Ingrédients<img src="images/fleche.svg" alt="" 
                     class="flecheOpen flecheIngredient"/>
+                    <input class="dropDownSearch" type="search">
                 </div>
                 <div class="ingredient__search hidde boutons" 
                 aria-labelledby="dropdownMenuIngredient">
@@ -66,7 +71,7 @@
                 placeholder="Recherche un appareil"
                 class="appareil__search__input input"
               />
-              <img src="./images/felche.svg" alt="" class="fleche" />
+              <img src="./images/fleche.svg" alt="" class="fleche" />
               <ul class="appareil__search__menu"></ul>
             </div>
           </div>
@@ -101,7 +106,6 @@
 
       <section id="recipesList"></section>
     </main>
-
-    <script  src="js/data/app.js"></script>
+    <script type="module" src="./js/app.js"></script>
   </body>
 </html>

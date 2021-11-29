@@ -1,1 +1,0 @@
-buttonClose.addEventListener ("click", closeModal);

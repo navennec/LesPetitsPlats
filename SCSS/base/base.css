@@ -1,6 +1,7 @@
 * {
   list-style-type: none;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -9,9 +10,9 @@ body {
   max-width: 1240px;
   margin: auto;
   background-color: red;
-
 }
 
 a {
-   text-decoration: none;
- }
+  text-decoration: none;
+}
+/*# sourceMappingURL=base.css.map */

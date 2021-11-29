@@ -9,6 +9,20 @@ body {
   max-width: 1240px;
   margin: auto;
 }
+.dropDownSearch {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;.dropDownSearch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    background-color: rgb(197, 194, 196);
+  }
+}
+ 
+
 
 a {
   text-decoration: none;
@@ -80,6 +94,7 @@ header {
   width: 170px;
   height: 70px;
   cursor: pointer;
+  background-color: blueviolet;
 }
 .ingredient__search {
   background-color: #3282f7;
